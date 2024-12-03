@@ -27,6 +27,10 @@ public class EnoughIsEnough {
     }
 
     public static int[] deleteNth(int[] elements, int maxOccurrences) {
+        if (maxOccurrences == 0) {
+            return new int[0];
+        }
+
         ArrayList<Integer> result = new ArrayList<>();
         Map<Integer, Integer> counter = new HashMap<>();
 
