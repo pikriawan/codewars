@@ -12,17 +12,8 @@ public class CamelCase {
 
     public static String camelCaseSingle(String str) {
         String[] letters = str.split("");
-        String result = "";
-
-        for (int i = 0; i < letters.length; i++) {
-            if (i == 0) {
-                result += letters[i].toUpperCase();
-            } else {
-                result += letters[i];
-            }
-        }
-
-        return result;
+        letters[0] = letters[0].toUpperCase();
+        return String.join("", letters);
     }
 
     public static String camelCase(String str) {
