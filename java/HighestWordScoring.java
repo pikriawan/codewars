@@ -1,11 +1,14 @@
-import java.util.HashMap;
-import java.util.Map;
+/**
+ * Tanggal: 19/12/2024
+ * Link: https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/java
+ */
 
 public class HighestWordScoring {
     public static final int FIRST_LETTER_INDEX = 96;
 
     public static void main(String[] args) {
-        System.out.println(high("i am from x"));
+        System.out.println(high("b aa"));
+        System.out.println(high("aa b"));
     }
 
     public static int getScore(String word) {
@@ -18,29 +21,38 @@ public class HighestWordScoring {
         return result;
     }
 
-    public static String getHighestWord(Map<String, Integer> words) {
+    public static String getHighestWord(Word[] words) {
         String result = "";
         int max = 0;
 
-        for (Map.Entry<String, Integer> word : words.entrySet()) {
-            /*if (word.getValue() >= max) {
-                max = word.getValue();
-                result = word.getKey();
-            }*/
-            System.out.println(word.getKey());
-            System.out.println(word.getValue());
+        for (Word word : words) {
+            if (word.score > max) {
+                result = word.value;
+                max = word.score;
+            }
         }
 
         return result;
     }
 
     public static String high(String s) {
-        Map<String, Integer> words = new HashMap<>();
+        String[] wordsString = s.split(" ");
+        Word[] words = new Word[wordsString.length];
 
-        for (String word : s.split(" ")) {
-            words.put(word, getScore(word));
+        for (int i = 0; i < words.length; i++) {
+            words[i] = new Word(wordsString[i], getScore(wordsString[i]));
         }
 
         return getHighestWord(words);
+    }
+}
+
+class Word {
+    public String value;
+    public int score;
+
+    public Word(String value, int score) {
+        this.value = value;
+        this.score = score;
     }
 }
