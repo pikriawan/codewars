@@ -46,7 +46,6 @@ const seven = createNumber(7);
 const eight = createNumber(8);
 const nine = createNumber(9);
 
-
 const plus = createOperator("plus");
 const minus = createOperator("minus");
 const times = createOperator("times");
