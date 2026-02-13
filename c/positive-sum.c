@@ -11,7 +11,7 @@ int positive_sum(const int values[/* count */], size_t count) {
 
     for (int i = 0; i < count; i++) {
         if (values[i] > 0) {
-            result += i;
+            result += values[i];
         }
     }
 
