@@ -1,3 +1,8 @@
+/**
+ * Tanggal: 4 Maret 2026
+ * Link: https://www.codewars.com/kata/632f97431ee367fb31c83e1f/train/c
+ */
+
 #include <stddef.h>
 #include <stdio.h>
 
