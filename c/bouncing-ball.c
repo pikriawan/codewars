@@ -18,18 +18,6 @@ int bouncing_ball(double h, double bounce, double window) {
         return -1;
     }
 
-    if (h <= 0) {
-        return -1;
-    }
-
-    if (bounce <= 0 || bounce >= 1) {
-        return -1;
-    }
-
-    if (window >= h) {
-        return -1;
-    }
-
     int count = 1;
     double remaining = h * bounce;
 
