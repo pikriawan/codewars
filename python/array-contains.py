@@ -1,3 +1,6 @@
+# Tanggal: 9 April 2026
+# Link: https://www.codewars.com/kata/57cc975ed542d3148f00015b/train/python
+
 def array_contains(array, value):
     for i in array:
         if i == value:
