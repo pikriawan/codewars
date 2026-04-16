@@ -57,7 +57,7 @@ char *alphabet_position(const char *text) {
 }
 
 int main() {
-    const char text[] = "12345";
+    const char text[] = "The sunset sets at twelve o' clock.";
     char *result = alphabet_position(text);
 
     printf("%s\n", result);
